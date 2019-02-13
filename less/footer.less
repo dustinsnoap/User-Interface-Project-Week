@@ -4,50 +4,34 @@
   |_| \___/ \___/ |_| |___|_|_\
 */
 footer {
-    background-color: #828282;
-    color: #ffffff;
-    font-family: Roboto, Arial, sans-serif;
-    display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-between;
-    height: 250px;
-    width: 100%;
-
+    background-color: @footer-background;
+    color: @footer-color;
+    .flex(space-between, center, column);
+    .size(@footer--height, 100%);
     .items {
-        display: flex;
-            align-items: center; 
-            justify-content: space-evenly;
-        margin-top: 50px;
+        .flex(space-evenly, center);
+        margin: @footer-items--margin;
         position: relative;
         width: 100%;
-
         .item {
-            display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-            height: 125px;
-            margin: 10px 0;
-
+            .flex(space-between, @direction: column);
+            height: @footer-item--height;
+            margin: @footer-item--margin;
             h3 {
-                font-size: 2rem;
-                font-weight: bold;
-                line-height: 2.4rem;
+                .text(@size: @footer-item-h3--size, @weight: @footer-item-h3--weight, @line-height: @footer-item-h3--line-height);
             }
             p, small {
-                font-size: 1.4rem;
-                line-height: 2.6rem;
+                .text(@size: @footer-item-p--size, @line-height: @footer-item-p--line-height);
             }
             input {
                 border-radius: 5px;
-                font-size: 1.4rem;
-                height: 40px;
-                padding: 10px;
+                font-size: @footer-item-input--size;
+                height: @footer-item-input--height;
+                padding: @footer-item-input--padding;
             }
         }//item
     }//items
     .copyright {
-        font-size: 1.2rem;
-        line-height: 2.6rem;
+        .text(@size: @footer-copy--size, @line-height: @footer-copy--line-height);
     }//copyright
 }

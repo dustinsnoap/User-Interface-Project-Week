@@ -137,25 +137,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/*  ___  ___    _ ___ ___ _____ ___ 
-   / _ \| _ )_ | | __/ __|_   _/ __|
-  | (_) | _ \ || | _| (__  | | \__ \
-   \___/|___/\__/|___\___| |_| |___/
-*/
-.button {
-  display: block;
-  border: 2px solid black;
-  text-decoration: none;
-  color: #222222;
-  padding: 10px;
-  width: 125px;
-  min-width: fit-content;
-  font-size: 1.6rem;
-  text-align: center;
-}
-.button:hover {
-  background-color: #5E9EB8;
-}
 /* _  _ ___   _   ___  ___ ___ 
   | || | __| /_\ |   \| __| _ \
   | __ | _| / _ \| |) | _||   /
@@ -169,52 +150,73 @@ header {
 }
 header .nav-container {
   background-color: #98A2AE;
-  width: 100%;
   height: 50px;
+  width: 100%;
   overflow: hidden;
   position: absolute;
 }
 header .nav-container .banner {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 50px;
   padding: 0 85px;
 }
 header .nav-container .banner .logo {
-  font-weight: 1000;
+  color: inherit;
+  text-decoration: none;
+  font-family: inherit;
   font-size: 2.4rem;
+  font-weight: 1000;
+  line-height: normal;
+  text-align: inherit;
+  text-transform: none;
 }
 header .nav-container nav {
   display: flex;
-  width: 100%;
   flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
 }
 header .nav-container nav a {
   color: #ffffff;
-  font-size: 4.8rem;
-  line-height: 8.5rem;
-  font-weight: 1000;
   text-decoration: none;
+  font-family: inherit;
+  font-size: 4.8rem;
+  font-weight: 1000;
+  line-height: 8.5rem;
   text-align: center;
+  text-transform: none;
 }
 header .nav-container nav a:hover {
   color: #222222;
 }
 header .jumbo {
-  width: 100%;
-  height: 550px;
-  margin-top: 50px;
   display: flex;
+  flex-direction: row;
+  justify-content: start;
   align-items: flex-end;
+  height: 550px;
+  width: 100%;
+  margin: 50px 0 0 0;
   padding: 50px 85px;
+  background-color: transparent;
   background-image: url('../img/home/home-jumbotron.png');
   background-size: cover;
+  background-repeat: repeat;
+  background-position: center center;
 }
 header .jumbo h1 {
-  font-weight: 1000;
+  color: inherit;
+  text-decoration: none;
+  font-family: inherit;
   font-size: 6.4rem;
+  font-weight: 1000;
   line-height: 7.5rem;
+  text-align: inherit;
+  text-transform: none;
 }
 /* ___ ___   ___ _____ ___ ___ 
   | __/ _ \ / _ \_   _| __| _ \
@@ -224,19 +226,19 @@ header .jumbo h1 {
 footer {
   background-color: #828282;
   color: #ffffff;
-  font-family: Roboto, Arial, sans-serif;
   display: flex;
-  align-items: center;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   height: 250px;
   width: 100%;
 }
 footer .items {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 50px;
+  align-items: center;
+  margin: 50px 0 0 0;
   position: relative;
   width: 100%;
 }
@@ -244,18 +246,30 @@ footer .items .item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: start;
   height: 125px;
   margin: 10px 0;
 }
 footer .items .item h3 {
+  color: inherit;
+  text-decoration: none;
+  font-family: inherit;
   font-size: 2rem;
-  font-weight: bold;
-  line-height: 2.4rem;
+  font-weight: 1000;
+  line-height: 2.6rem;
+  text-align: inherit;
+  text-transform: none;
 }
 footer .items .item p,
 footer .items .item small {
+  color: inherit;
+  text-decoration: none;
+  font-family: inherit;
   font-size: 1.4rem;
+  font-weight: normal;
   line-height: 2.6rem;
+  text-align: inherit;
+  text-transform: none;
 }
 footer .items .item input {
   border-radius: 5px;
@@ -264,8 +278,14 @@ footer .items .item input {
   padding: 10px;
 }
 footer .copyright {
+  color: inherit;
+  text-decoration: none;
+  font-family: inherit;
   font-size: 1.2rem;
+  font-weight: normal;
   line-height: 2.6rem;
+  text-align: inherit;
+  text-transform: none;
 }
 /* __  __   _   ___ _  _ 
   |  \/  | /_\ |_ _| \| |
@@ -274,29 +294,38 @@ footer .copyright {
 */
 body {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: start;
   font-family: Roboto, Arial, sans-serif;
 }
 .container {
-  width: 100%;
   max-width: 1024px;
+  padding: 0 75px;
+  width: 100%;
 }
 .main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 75px;
 }
 .main .subtitle {
-  font-weight: 1000;
-  font-size: 2.8rem;
   color: #222222;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 2.8rem;
+  font-weight: 1000;
+  line-height: normal;
+  text-align: inherit;
+  text-transform: none;
   align-self: flex-start;
 }
 .main .item {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   margin: 50px 0;
   width: 100%;
 }
@@ -304,20 +333,44 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: start;
 }
 .main .item .text h2 {
   color: #222222;
-  font-weight: 1000;
+  text-decoration: none;
+  font-family: inherit;
   font-size: 2.8rem;
-  margin-bottom: 20px;
+  font-weight: 1000;
+  line-height: normal;
+  text-align: inherit;
+  text-transform: none;
+  margin-bottom: 0 0 20px 0;
 }
 .main .item .text p {
+  color: inherit;
+  text-decoration: none;
+  font-family: inherit;
   font-size: 1.6rem;
+  font-weight: normal;
   line-height: 2.4rem;
+  text-align: inherit;
+  text-transform: none;
   width: 410px;
 }
 .main .item .text a {
-  margin-top: 20px;
+  display: block;
+  border: 2px solid black;
+  text-decoration: none;
+  color: #222222;
+  padding: 10px;
+  width: 125px;
+  min-width: fit-content;
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+.main .item .text a:hover {
+  background-color: #5E9EB8;
 }
 .main .item.small:nth-of-type(odd) .text {
   order: 1;
@@ -326,26 +379,38 @@ body {
   order: 2;
 }
 .main .item.small img {
-  width: 410px;
   height: 275px;
+  width: 410px;
 }
 .main .item.large {
   flex-direction: column;
 }
-.main .item.large h2 {
-  background-color: #d7d7d7;
-  width: 300px;
-  height: 100px;
-  line-height: 100px;
-  text-align: center;
-  align-self: flex-end;
-  margin-top: -50px;
-  border: 1px solid white;
-  text-transform: uppercase;
+.main .item.large .text {
+  width: 100%;
 }
-.main .item.large p {
+.main .item.large .text h2 {
+  color: inherit;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 2.8rem;
+  font-weight: normal;
+  line-height: 10rem;
+  text-align: center;
+  text-transform: uppercase;
+  height: 100px;
+  width: 300px;
+  align-self: flex-end;
+  background-color: #d8d8d8;
+  border: 1px solid #ffffff;
+  margin: -50px 0 0 0;
+}
+.main .item.large .text p {
   align-self: center;
-  margin-top: 25px;
+  margin: 25px 0 0 0;
+}
+.main .item.large img {
+  height: 235px;
+  width: 874px;
 }
 .main .item.large:nth-of-type(even) h2 {
   align-self: flex-start;
