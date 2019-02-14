@@ -4,54 +4,95 @@
   |_||_|___/_/ \_\___/|___|_|_\
 */
 header {
-    color: @header-color;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    color: #ffffff;
     .nav-container {
-        background-color: @header-nav--background;
-        .size(@header-nav--height, 100%);
-        width: 100%;
+        .text(@size: 2.4rem, @weight: 1000);
+        background-color: #98A2AE;
+        height: 50px;
         overflow: hidden;
-        position: absolute;
+        position: fixed;
         .banner {
             .flex(space-between, center);
-            height: @header-nav-banner-height;
-            padding: @header-nav-banner-padding;
-            .logo {
-                .text(@size: @header-logo--size, @weight: @header-logo--weight);
-            }
-            @media(max-width: @SM) {
-                padding: @header-nav-banner-padding-SM;
-            }
-        }
-        nav {
-            .flex(@direction: column);
-            width: 100%;
-            a {
-                .text(@color: @header-nav-a--color, @size: @header-nav-a--size, @align: center, @weight: @header-nav-a--weight, @line-height: @header-nav-a--line-height, @decoration: none);
+            .size(50px, 100%);
+            .nav-btn {
+                cursor: pointer;
+                display: inline-block;
+                div {
+                    .size(5px, 35px);
+                    background-color: #ffffff;
+                    margin: 6px 0;
+                    transition: 0.4s;
+                }
                 &:hover {
-                    color: @header-nav-a--color-hover;
+                    div {
+                        &:nth-of-type(1) {
+                            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+                            transform: rotate(-45deg) translate(-9px, 6px);
+                        }
+                        &:nth-of-type(2) {
+                            opacity: 0;
+                        }
+                        &:nth-of-type(3) {
+                            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+                            transform: rotate(45deg) translate(-8px, -8px);
+                        }
+                    }  
                 }
             }
         }
     }
     .jumbo {
-        .background(@image: url('../img/home/home-jumbotron.png'), @size: cover);
-        .flex(@align: flex-end);
-        .size(@header-jumbo--height, 100%);
-        margin: @header-jumbo--margin;
-        padding: @header-jumbo--padding;
-        @media (max-width: @SM) {
-            .size(@header-jumbo--height-SM, 100%);
-            padding: @header-jumbo--padding-SM;
-        }
+        .flex(flex-start, flex-end);
+        transform: translateY(50px);
         h1 {
-            .text(@size: @header-jumbo-h1--size, @weight: @header-jumbo-h1--weight, @line-height: @header-jumbo-h1--line-height);
-            @media (max-width: @SM) {
-                font-size: @header-jumbo-h1--size-SM;
-                line-height: @header-jumbo-h1--line-height-SM;
+            font-weight: 1000;
+        }
+    }
+}
+header.home {
+    .jumbo {
+        .background(@image: url('../img/home/home-jumbotron.png'), @size: cover, @position: bottom);
+        height: 550px;
+    }
+}
+header.services {
+    .jumbo {
+        .background(@image: url('../img/services/services-jumbotron.png'), @size: cover, @position: bottom);
+        height: 200px;
+    }
+}
+@media (min-width: 800px) {
+    header {
+        .nav-container {
+            width: 1024px;
+            padding: 0 85px;
+        }
+        .jumbo {
+            padding: 50px 82px;
+            h1 {
+                font-size: 6.4rem;
+                line-height: 7.5rem;
             }
+        }
+    }
+}
+@media (max-width: 800px) {
+    header {
+        .nav-container {
+            width: 100%;
+            padding: 0 16px;
+        }
+        .jumbo {
+            padding: 23px 15px;
+            h1 {
+                font-size: 3.2rem;
+                line-height: 4.2rem;
+            }
+        }
+    }
+    header.home {
+        .jumbo {
+            height: 209px;
         }
     }
 }
