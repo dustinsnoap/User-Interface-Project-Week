@@ -35,3 +35,33 @@ footer {
         .text(@size: @footer-copy--size, @line-height: @footer-copy--line-height);
     }//copyright
 }
+@media (max-width: @SM) {
+    footer {
+        margin-top: 30px;
+        height: fit-content;
+        padding: 0 15px;
+        .items {
+            flex-direction: column;
+            margin: 10px 0 17px 0;
+            align-items: flex-start;
+            .item {
+                margin: 12px 0 15px 0;
+                h3 {
+                    font-size: 20px;
+                }
+                input {
+                    font-size: 18px;
+                    padding: 23px 7px;
+                    width: 100%;
+                    margin: 15px 0 6px 0;
+                }
+            }
+            .email {
+                margin-bottom: 32px;
+            }
+        }
+        .copyright {
+            margin-bottom: 22px;
+        }
+    }   
+}

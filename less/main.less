@@ -14,6 +14,7 @@ body {
 }
 .main {
   .flex(center,center,column);
+  padding-top: 36px;
   .subtitle {
     .text(@color: @main-h2--color, @size: @main-h2--size, @weight: @main-h2--weight);
     align-self: flex-start;
@@ -26,11 +27,11 @@ body {
       .flex(center, @direction: column);
       h2 {
         .text(@color: @main-item-h2--color, @size: @main-item-h2--size, @weight: @main-item-h2--weight);
-        margin-bottom: @main-item-h2--margin-sm;
+        margin: @main-item-h2--margin-sm;
       }
       p {
         .text(@size: @main-item-p--size, @line-height: @main-item-p--line-height);
-        width: @main-item-p--width;
+        width: 100%;
       }
       a {
         .button();
@@ -39,17 +40,9 @@ body {
     }//text
   }//item
   .item.small {
-    &:nth-of-type(odd) {
-      .text {
-        order: 1;
-      }
-      img {
-        order: 2;
-      }
-    }
     img {
       .size(@main-item-img--height-sm, @main-item-img--width-sm);
-    } 
+    }
   }//item-small
   .item.large {
     flex-direction: column;
@@ -77,4 +70,77 @@ body {
       }
     }
   }//item-large
+}
+/*     ___  __          __        ___  __     ___  __
+ |\/| |__  |  \ |  /\  /  \ |  | |__  |__) | |__  /__`
+ |  | |___ |__/ | /~~\ \__X \__/ |___ |  \ | |___ .__/
+*/    
+@media (min-width: @SM) {
+  .main {
+    .item.small {
+      .text {
+        width: 410px;
+      }
+      &:nth-of-type(odd) {
+        .text {
+          order: 1;
+        }
+        img {
+          order: 2;
+        }
+      }
+    }
+  }
+}
+@media (max-width: @SM) {
+  .container {
+    padding: 0;
+  }
+  .main {
+    .subtitle {
+      font-size: 2.4rem;
+      margin: 3px 15px 23px 15px;
+    }
+    .item {
+      padding: 0 15px;
+      margin: 0 0 20px 0;
+      .text {
+        h2 {
+          font-size: 24px;
+          margin: 25px 0 20px 0;
+        }
+      }
+    }//item
+    .item.small {
+      flex-direction: column;
+      img {
+        width: 100%;
+      }
+      .text {
+        width: 100%;
+      }
+    }//itemsmall
+    .item.large {
+      margin-bottom: 47px;
+      padding: 0;
+      .text {
+        padding: 0 15px;
+        h2 {
+          font-size: 24px;
+          letter-spacing: 8px;
+          margin: -15px 0 0 0;
+          width: 100%;
+          height: 97px;
+          padding: 0 15px;
+        }
+        p {
+          font-size: 18px;
+        }
+      }//text
+      img {
+        width: 100%;
+        height: 200px;
+      }
+    }
+  }//main
 }

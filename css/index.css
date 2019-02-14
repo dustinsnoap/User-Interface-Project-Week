@@ -173,6 +173,11 @@ header .nav-container .banner .logo {
   text-align: inherit;
   text-transform: none;
 }
+@media (max-width: 800px) {
+  header .nav-container .banner {
+    padding: 0 15px;
+  }
+}
 header .nav-container nav {
   display: flex;
   flex-direction: column;
@@ -194,6 +199,11 @@ header .nav-container nav a:hover {
   color: #222222;
 }
 header .jumbo {
+  background-color: transparent;
+  background-image: url('../img/home/home-jumbotron.png');
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center center;
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -202,11 +212,13 @@ header .jumbo {
   width: 100%;
   margin: 50px 0 0 0;
   padding: 50px 85px;
-  background-color: transparent;
-  background-image: url('../img/home/home-jumbotron.png');
-  background-size: cover;
-  background-repeat: repeat;
-  background-position: center center;
+}
+@media (max-width: 800px) {
+  header .jumbo {
+    height: 210px;
+    width: 100%;
+    padding: 23px 16px;
+  }
 }
 header .jumbo h1 {
   color: inherit;
@@ -217,6 +229,206 @@ header .jumbo h1 {
   line-height: 7.5rem;
   text-align: inherit;
   text-transform: none;
+}
+@media (max-width: 800px) {
+  header .jumbo h1 {
+    font-size: 3.6rem;
+    line-height: 4.2rem;
+  }
+}
+/* __  __   _   ___ _  _ 
+  |  \/  | /_\ |_ _| \| |
+  | |\/| |/ _ \ | || .` |
+  |_|  |_/_/ \_\___|_|\_|
+*/
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  font-family: Roboto, Arial, sans-serif;
+}
+.container {
+  max-width: 1024px;
+  padding: 0 75px;
+  width: 100%;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 36px;
+}
+.main .subtitle {
+  color: #222222;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 2.8rem;
+  font-weight: 1000;
+  line-height: normal;
+  text-align: inherit;
+  text-transform: none;
+  align-self: flex-start;
+}
+.main .item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0;
+  width: 100%;
+}
+.main .item .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.main .item .text h2 {
+  color: #222222;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 2.8rem;
+  font-weight: 1000;
+  line-height: normal;
+  text-align: inherit;
+  text-transform: none;
+  margin: 0 0 20px 0;
+}
+.main .item .text p {
+  color: inherit;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 2.4rem;
+  text-align: inherit;
+  text-transform: none;
+  width: 100%;
+}
+.main .item .text a {
+  display: block;
+  border: 2px solid black;
+  text-decoration: none;
+  color: #222222;
+  padding: 10px;
+  width: 125px;
+  min-width: fit-content;
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+.main .item .text a:hover {
+  background-color: #5E9EB8;
+}
+@media (max-width: 800px) {
+  .main .item .text a {
+    margin: 25px 0;
+    width: 100%;
+    height: 48px;
+    line-height: 21px;
+  }
+}
+.main .item.small img {
+  height: 275px;
+  width: 410px;
+}
+.main .item.large {
+  flex-direction: column;
+}
+.main .item.large .text {
+  width: 100%;
+}
+.main .item.large .text h2 {
+  color: inherit;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 2.8rem;
+  font-weight: normal;
+  line-height: 10rem;
+  text-align: center;
+  text-transform: uppercase;
+  height: 100px;
+  width: 300px;
+  align-self: flex-end;
+  background-color: #d8d8d8;
+  border: 1px solid #ffffff;
+  margin: -50px 0 0 0;
+}
+.main .item.large .text p {
+  align-self: center;
+  margin: 25px 0 0 0;
+}
+.main .item.large img {
+  height: 235px;
+  width: 874px;
+}
+.main .item.large:nth-of-type(even) h2 {
+  align-self: flex-start;
+}
+/*     ___  __          __        ___  __     ___  __
+ |\/| |__  |  \ |  /\  /  \ |  | |__  |__) | |__  /__`
+ |  | |___ |__/ | /~~\ \__X \__/ |___ |  \ | |___ .__/
+*/
+@media (min-width: 800px) {
+  .main .item.small .text {
+    width: 410px;
+  }
+  .main .item.small:nth-of-type(odd) .text {
+    order: 1;
+  }
+  .main .item.small:nth-of-type(odd) img {
+    order: 2;
+  }
+}
+@media (max-width: 800px) {
+  .container {
+    padding: 0;
+  }
+  .main .subtitle {
+    font-size: 2.4rem;
+    margin: 3px 15px 23px 15px;
+  }
+  .main .item {
+    padding: 0 15px;
+    margin: 0 0 20px 0;
+  }
+  .main .item .text h2 {
+    font-size: 24px;
+    margin: 25px 0 20px 0;
+  }
+  .main .item.small {
+    flex-direction: column;
+  }
+  .main .item.small img {
+    width: 100%;
+  }
+  .main .item.small .text {
+    width: 100%;
+  }
+  .main .item.large {
+    margin-bottom: 47px;
+    padding: 0;
+  }
+  .main .item.large .text {
+    padding: 0 15px;
+  }
+  .main .item.large .text h2 {
+    font-size: 24px;
+    letter-spacing: 8px;
+    margin: -15px 0 0 0;
+    width: 100%;
+    height: 97px;
+    padding: 0 15px;
+  }
+  .main .item.large .text p {
+    font-size: 18px;
+  }
+  .main .item.large img {
+    width: 100%;
+    height: 200px;
+  }
 }
 /* ___ ___   ___ _____ ___ ___ 
   | __/ _ \ / _ \_   _| __| _ \
@@ -287,131 +499,33 @@ footer .copyright {
   text-align: inherit;
   text-transform: none;
 }
-/* __  __   _   ___ _  _ 
-  |  \/  | /_\ |_ _| \| |
-  | |\/| |/ _ \ | || .` |
-  |_|  |_/_/ \_\___|_|\_|
-*/
-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: start;
-  font-family: Roboto, Arial, sans-serif;
-}
-.container {
-  max-width: 1024px;
-  padding: 0 75px;
-  width: 100%;
-}
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.main .subtitle {
-  color: #222222;
-  text-decoration: none;
-  font-family: inherit;
-  font-size: 2.8rem;
-  font-weight: 1000;
-  line-height: normal;
-  text-align: inherit;
-  text-transform: none;
-  align-self: flex-start;
-}
-.main .item {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 50px 0;
-  width: 100%;
-}
-.main .item .text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-}
-.main .item .text h2 {
-  color: #222222;
-  text-decoration: none;
-  font-family: inherit;
-  font-size: 2.8rem;
-  font-weight: 1000;
-  line-height: normal;
-  text-align: inherit;
-  text-transform: none;
-  margin-bottom: 0 0 20px 0;
-}
-.main .item .text p {
-  color: inherit;
-  text-decoration: none;
-  font-family: inherit;
-  font-size: 1.6rem;
-  font-weight: normal;
-  line-height: 2.4rem;
-  text-align: inherit;
-  text-transform: none;
-  width: 410px;
-}
-.main .item .text a {
-  display: block;
-  border: 2px solid black;
-  text-decoration: none;
-  color: #222222;
-  padding: 10px;
-  width: 125px;
-  min-width: fit-content;
-  font-size: 1.6rem;
-  text-align: center;
-  margin: 0 0 20px 0;
-}
-.main .item .text a:hover {
-  background-color: #5E9EB8;
-}
-.main .item.small:nth-of-type(odd) .text {
-  order: 1;
-}
-.main .item.small:nth-of-type(odd) img {
-  order: 2;
-}
-.main .item.small img {
-  height: 275px;
-  width: 410px;
-}
-.main .item.large {
-  flex-direction: column;
-}
-.main .item.large .text {
-  width: 100%;
-}
-.main .item.large .text h2 {
-  color: inherit;
-  text-decoration: none;
-  font-family: inherit;
-  font-size: 2.8rem;
-  font-weight: normal;
-  line-height: 10rem;
-  text-align: center;
-  text-transform: uppercase;
-  height: 100px;
-  width: 300px;
-  align-self: flex-end;
-  background-color: #d8d8d8;
-  border: 1px solid #ffffff;
-  margin: -50px 0 0 0;
-}
-.main .item.large .text p {
-  align-self: center;
-  margin: 25px 0 0 0;
-}
-.main .item.large img {
-  height: 235px;
-  width: 874px;
-}
-.main .item.large:nth-of-type(even) h2 {
-  align-self: flex-start;
+@media (max-width: 800px) {
+  footer {
+    margin-top: 30px;
+    height: fit-content;
+    padding: 0 15px;
+  }
+  footer .items {
+    flex-direction: column;
+    margin: 10px 0 17px 0;
+    align-items: flex-start;
+  }
+  footer .items .item {
+    margin: 12px 0 15px 0;
+  }
+  footer .items .item h3 {
+    font-size: 20px;
+  }
+  footer .items .item input {
+    font-size: 18px;
+    padding: 23px 7px;
+    width: 100%;
+    margin: 15px 0 6px 0;
+  }
+  footer .items .email {
+    margin-bottom: 32px;
+  }
+  footer .copyright {
+    margin-bottom: 22px;
+  }
 }

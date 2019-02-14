@@ -21,6 +21,9 @@ header {
             .logo {
                 .text(@size: @header-logo--size, @weight: @header-logo--weight);
             }
+            @media(max-width: @SM) {
+                padding: @header-nav-banner-padding-SM;
+            }
         }
         nav {
             .flex(@direction: column);
@@ -34,13 +37,21 @@ header {
         }
     }
     .jumbo {
+        .background(@image: url('../img/home/home-jumbotron.png'), @size: cover);
         .flex(@align: flex-end);
         .size(@header-jumbo--height, 100%);
         margin: @header-jumbo--margin;
         padding: @header-jumbo--padding;
-        .background(@image: url('../img/home/home-jumbotron.png'), @size: cover);
+        @media (max-width: @SM) {
+            .size(@header-jumbo--height-SM, 100%);
+            padding: @header-jumbo--padding-SM;
+        }
         h1 {
             .text(@size: @header-jumbo-h1--size, @weight: @header-jumbo-h1--weight, @line-height: @header-jumbo-h1--line-height);
+            @media (max-width: @SM) {
+                font-size: @header-jumbo-h1--size-SM;
+                line-height: @header-jumbo-h1--line-height-SM;
+            }
         }
     }
 }
