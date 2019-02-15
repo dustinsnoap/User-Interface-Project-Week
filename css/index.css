@@ -180,6 +180,7 @@ header .nav-container {
   height: 50px;
   overflow: hidden;
   position: fixed;
+  top: 0;
 }
 header .nav-container .banner {
   display: flex;
@@ -188,6 +189,9 @@ header .nav-container .banner {
   align-items: center;
   height: 50px;
   width: 100%;
+}
+header .nav-container .banner .logo {
+  font-weight: bold;
 }
 header .nav-container .banner .nav-btn {
   cursor: pointer;
@@ -216,10 +220,10 @@ header .jumbo {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-end;
-  transform: translateY(50px);
+  margin-top: 50px;
 }
 header .jumbo h1 {
-  font-weight: 1000;
+  font-weight: bold;
 }
 header.home .jumbo {
   background-color: transparent;
@@ -265,4 +269,58 @@ header.services .jumbo {
   header.home .jumbo {
     height: 209px;
   }
+}
+.main {
+  display: flex;
+  flex-direction: column;
+}
+.main .item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+}
+.main .item.small {
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 800px) {
+  .main {
+    padding: 0 85px;
+  }
+  .main .item {
+    margin: 50px 0;
+  }
+  .main .item .text {
+    width: 410px;
+  }
+  .main .item h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #222222;
+  }
+  .main .item p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin: 25px 0;
+  }
+  .main .item a {
+    border: 1px solid black;
+    color: #222222;
+    display: block;
+    font-size: 1.6rem;
+    padding: 15px 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 136px;
+    min-width: fit-content;
+  }
+  .main .item:nth-of-type(odd) .text {
+    order: 1;
+  }
+  .main .item:nth-of-type(odd) img {
+    order: 2;
+  }
+}
+@media (max-width: 800px) {
 }

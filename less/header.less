@@ -11,9 +11,13 @@ header {
         height: 50px;
         overflow: hidden;
         position: fixed;
+        top: 0;
         .banner {
             .flex(space-between, center);
             .size(50px, 100%);
+            .logo {
+                font-weight: bold;
+            }
             .nav-btn {
                 cursor: pointer;
                 display: inline-block;
@@ -43,9 +47,9 @@ header {
     }
     .jumbo {
         .flex(flex-start, flex-end);
-        transform: translateY(50px);
+        margin-top: 50px;
         h1 {
-            font-weight: 1000;
+            font-weight: bold;
         }
     }
 }
