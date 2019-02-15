@@ -299,6 +299,31 @@ header.services .jumbo {
   text-align: center;
   text-decoration: none;
 }
+.main .item.large {
+  flex-direction: column;
+}
+.main .item.large .text {
+  display: flex;
+  flex-direction: column;
+}
+.main .item.large h2 {
+  background-color: #d7d7d7;
+  border: 1px solid #ffffff;
+  display: block;
+  font-size: 2.4rem;
+  height: 95px;
+  letter-spacing: 7px;
+  line-height: 95px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.main .item.large p {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+.main .item.large img {
+  width: 100%;
+}
 @media (min-width: 800px) {
   .main {
     padding: 0 85px;
@@ -306,34 +331,63 @@ header.services .jumbo {
   .main .subtitle {
     font-size: 2.4rem;
     font-weight: 1000;
-    margin-top: 50px;
+    margin: 49px 0 45px 0;
+    word-spacing: 2px;
   }
-  .main .item {
+  .main .item.small {
     margin: 50px 0;
   }
-  .main .item .text {
+  .main .item.small .text {
     width: 410px;
   }
-  .main .item h2 {
+  .main .item.small h2 {
     font-size: 2.4rem;
     color: #222222;
   }
-  .main .item p {
+  .main .item.small p {
     margin: 25px 0;
   }
-  .main .item a {
+  .main .item.small a {
     padding: 15px 10px;
     width: 136px;
     min-width: fit-content;
   }
-  .main .item:nth-of-type(odd) .text {
+  .main .item.small:nth-of-type(odd) .text {
     order: 1;
   }
-  .main .item:nth-of-type(odd) img {
+  .main .item.small:nth-of-type(odd) img {
     order: 2;
+  }
+  .main .item.large {
+    align-items: center;
+  }
+  .main .item.large .text {
+    align-items: center;
+    margin: 92px 0 79px 0;
+    width: 100%;
+  }
+  .main .item.large h2 {
+    align-self: flex-end;
+    position: absolute;
+    transform: translateY(-150px);
+    width: 316px;
+  }
+  .main .item.large p {
+    width: 448px;
+    margin-bottom: 22px;
+  }
+  .main .item.large:nth-of-type(even) h2 {
+    align-self: flex-start;
   }
 }
 @media (max-width: 800px) {
+  .main .subtitle {
+    font-size: 2.4rem;
+    padding: 0 15px;
+    margin-top: 42px;
+    margin-bottom: 25px;
+    word-spacing: 2px;
+  }
   .main .item.small {
     flex-direction: column;
     padding: 0 15px;
@@ -357,5 +411,21 @@ header.services .jumbo {
   .main .item.small img {
     width: 100%;
     height: 276px;
+  }
+  .main .item.large {
+    margin-bottom: 36px;
+  }
+  .main .item.large .text {
+    padding: 0 15px;
+  }
+  .main .item.large h2 {
+    transform: translateY(-15px);
+    word-spacing: 6px;
+  }
+  .main .item.large p {
+    margin: 12px 0;
+  }
+  .main .item.large img {
+    height: 200px;
   }
 }
