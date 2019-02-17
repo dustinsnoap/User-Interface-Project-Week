@@ -85,20 +85,17 @@ let articles = {
         },{
             id: 'designbuild',
             title: `Design Build`,
-            imgSrc: `services/services-tab-pre-construction-img.png`,
+            imgSrc: `services/services-tab-design-build-img.png`,
             p1:  `Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.`,
             p2: `Phosfluorescently engage worldwide methodologies with web-enabled technology. Interactively coordinate proactive e-commerce via process-centric 'outside the box' thinking. Completely pursue scalable customer service through sustainable potentialities.`,
         },{
             id: 'sustainability',
             title: `Sustainability`,
-            imgSrc: `services/services-tab-pre-construction-img.png`,
+            imgSrc: `services/services-tab-sustainability-img.png`,
             p1:  `Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.`,
             p2: `Phosfluorescently engage worldwide methodologies with web-enabled technology. Interactively coordinate proactive e-commerce via process-centric 'outside the box' thinking. Completely pursue scalable customer service through sustainable potentialities.`,
         },
     ],
 }
 
-window.onload = () => {
-    new TabLinks(document.querySelector('.tabs'))
-    // document.querySelectorAll('.tab').forEach(tab => new TabLink(tab))
-}
+new TabLinks(document.querySelector('.tabs'))
