@@ -281,14 +281,6 @@ header.services .jumbo {
     height: 210px;
   }
 }
-header.contact .jumbo {
-  background-color: transparent;
-  background-image: url('../img/contact/contact-jumbotron.png');
-  background-size: cover;
-  background-repeat: repeat;
-  background-position: bottom;
-  height: 200px;
-}
 @media (min-width: 800px) {
   header .nav-container {
     width: 1024px;
@@ -324,7 +316,7 @@ header.contact .jumbo {
 }
 @media (min-width: 800px) {
   .main {
-    padding: 48px 85px;
+    padding: 50px 85px;
   }
   .main .p > p {
     font-size: 1.6rem;
@@ -355,95 +347,6 @@ header.contact .jumbo {
     line-height: 2.6rem;
   }
 }
-/* ___ ___  _  _ _____ _   ___ _____ 
-  / __/ _ \| \| |_   _/_\ / __|_   _|
- | (_| (_) | .` | | |/ _ \ (__  | |  
-  \___\___/|_|\_| |_/_/ \_\___| |_|  
-*/
-@media (min-width: 800px) {
-  .main.contact {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .main.contact h2 {
-    font-size: 2.4rem;
-    font-weight: 1000;
-    letter-spacing: 0.2px;
-  }
-  .main.contact h3 {
-    font-size: 2rem;
-    font-weight: 1000;
-    word-spacing: 0.2px;
-  }
-  .main.contact p {
-    font-size: 1.8rem;
-    line-height: 2.9rem;
-  }
-  .main.contact form {
-    display: flex;
-    flex-direction: column;
-    height: 650px;
-    min-height: fit-content;
-  }
-  .main.contact form .item {
-    display: flex;
-    flex-direction: column;
-    margin-top: 46px;
-  }
-  .main.contact form .item label {
-    font-size: 1.6rem;
-  }
-  .main.contact form .item input {
-    border-radius: 5px;
-    border-width: 1px;
-    font-size: 1.5rem;
-    letter-spacing: 0.3px;
-    margin: 8px 0;
-    padding: 9px 11px;
-    width: 411px;
-  }
-  .main.contact form .item input[type='radio'] {
-    width: fit-content;
-    margin: 6px 8px 6px 0;
-  }
-  .main.contact form .item input[type='textarea'] {
-    height: 200px;
-  }
-  .main.contact form .item input[type='submit'] {
-    border: 1px solid black;
-    background-color: transparent;
-    width: 136px;
-    height: 46px;
-  }
-  .main.contact form .item textarea {
-    width: 411px;
-    height: 135px;
-    border-radius: 5px;
-    max-width: 666px;
-  }
-  .main.contact form .item small {
-    color: #888;
-    font-size: 1.3rem;
-    word-spacing: 0.33px;
-  }
-  .main.contact form .item div {
-    display: flex;
-    justify-content: flex-start;
-  }
-  .main.contact .locations {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 650px;
-    min-width: fit-content;
-  }
-}
-/*  _   ___ _____ ___ ___ _    ___ 
-   /_\ | _ \_   _|_ _/ __| |  | __|
-  / _ \|   / | |  | | (__| |__| _| 
- /_/ \_\_|_\ |_| |___\___|____|___|
-*/
 article {
   display: flex;
   flex-direction: row;
