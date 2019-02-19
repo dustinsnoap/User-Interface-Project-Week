@@ -4,15 +4,16 @@
   \___\___/|_|\_| |_/_/ \_\___| |_|  
 */
 .main.contact {
-    @media (min-width: 800px) {
+    display: flex;
+    h2 {
+        font-size: 2.4rem;
+        font-weight: 1000;
+        letter-spacing: 0.33px;
+    }
+    .item {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        h2 {
-            font-size: 2.4rem;
-            font-weight: 1000;
-            letter-spacing: 0.2px;
-        }
+        flex-direction: column;
+        margin: 28px 0;
         h3 {
             font-size: 2rem;
             font-weight: 1000;
@@ -22,54 +23,71 @@
             font-size: 1.8rem;
             line-height: 2.9rem;
         }
+        label {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+        }
+        small {
+            color: #888;
+            font-size: 1.3rem;
+            line-height: 1.7rem;
+            word-spacing: 0.33px;
+            
+        }
+        input {
+            height: 40px;
+            padding: 0 9px;
+            margin: 6px 0;
+            font-size: 1.5rem;
+            border-radius: 5px;
+            word-spacing: 2px;
+            letter-spacing: 0.3px;
+            border-width: 1px;
+        }
+        input[type=radio] {
+            margin: 0 6px 0 0;
+            padding: 0;
+            height: fit-content;
+            width: fit-content;
+        }
+        input[type=submit] {
+            background-color: transparent;
+            border: 1px solid black;
+            border-radius: 0;
+        }
+        textarea {
+            height: 135px;
+            border-radius: 5px;
+            padding: 7px;
+        }
+    }
+    @media (min-width: 800px) {
+        flex-direction: row;
+        justify-content: space-between;
         form {
             display: flex;
             flex-direction: column;
             height: 650px;
             min-height: fit-content;
             .item {
-                display: flex;
-                flex-direction: column;
-                margin-top: 46px;
-                label {
-                    font-size: 1.6rem;
-                }
                 input {
-                    border-radius: 5px;
-                    border-width: 1px;
-                    font-size: 1.5rem;
-                    letter-spacing: 0.3px;
-                    margin: 8px 0;
-                    padding: 9px 11px;
                     width: 411px;
-                }
-                input[type='radio'] {
-                    width: fit-content;
-                    margin: 0 6px 0 0;
                 }
                 input[type='textarea'] {
                     height: 200px;
                 }
                 input[type='submit'] {
-                    border: 1px solid black;
-                    background-color: transparent;
                     width: 136px;
                     height: 46px;
                 }
                 textarea {
                     width: 411px;
-                    height: 135px;
-                    border-radius: 5px;
                     max-width: 666px;
-                }
-                small {
-                    color: #888;
-                    font-size: 1.3rem;
-                    word-spacing: 0.33px;
                 }
                 div {
                     display: flex;
                     justify-content: flex-start;
+                    align-items: center;
                     margin: 5px 0;
                 }
             }//item
@@ -84,6 +102,20 @@
         
     }
     @media (max-width: 800px) {
-
+        flex-direction: column;
+        form {
+            input[type=submit] {
+                background-color: transparent;
+                border: 1px solid black;
+                border-radius: 0;
+            }
+        }//form
+        .locations {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 500px;
+            min-width: fit-content;
+        }
     }
 }
