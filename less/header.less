@@ -108,7 +108,13 @@ header.services {
 header.contact {
     .jumbo {
         .background(@image: url('../img/contact/contact-jumbotron.png'), @size: cover, @position: bottom);
-        height: 200px;
+    }
+    @media (min-width: 800px) {
+        .jumbo {height: 200px;}
+        
+    }
+    @media (max-width: 800px) {
+        .jumbo {height: 210px;}
     }
 }
 @media (min-width: 800px) {

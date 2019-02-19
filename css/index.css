@@ -287,7 +287,16 @@ header.contact .jumbo {
   background-size: cover;
   background-repeat: repeat;
   background-position: bottom;
-  height: 200px;
+}
+@media (min-width: 800px) {
+  header.contact .jumbo {
+    height: 200px;
+  }
+}
+@media (max-width: 800px) {
+  header.contact .jumbo {
+    height: 210px;
+  }
 }
 @media (min-width: 800px) {
   header .nav-container {
@@ -405,7 +414,7 @@ header.contact .jumbo {
   }
   .main.contact form .item input[type='radio'] {
     width: fit-content;
-    margin: 6px 8px 6px 0;
+    margin: 0 6px 0 0;
   }
   .main.contact form .item input[type='textarea'] {
     height: 200px;
@@ -430,6 +439,7 @@ header.contact .jumbo {
   .main.contact form .item div {
     display: flex;
     justify-content: flex-start;
+    margin: 5px 0;
   }
   .main.contact .locations {
     display: flex;
