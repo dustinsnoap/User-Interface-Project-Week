@@ -866,7 +866,7 @@ footer .copyright {
   transition: background-color 400ms ease-in-out;
   width: 15px;
 }
-.carousel .tabs .tab .selected {
+.carousel .tabs .tab.selected {
   background-color: #97A0AD;
 }
 .carousel .tabs .tab:hover {
