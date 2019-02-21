@@ -90,14 +90,3 @@ class Carousel {
         return carousel
     }
 }
-
-let atts = {
-    title: `This is the header`,
-    imgs: [
-            './img/home/home-jumbotron.png',
-            './img/services/services-jumbotron.png',
-            './img/contact/contact-jumbotron.png',
-            ]
-}
-
-new Carousel(atts)
