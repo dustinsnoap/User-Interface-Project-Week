@@ -1,0 +1,47 @@
+.main.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+    grid-column-gap: 50px;
+    width: 100%;
+}
+.project {
+    display: grid;
+    position: relative;
+    width: inherit;
+    height: 280px;
+    overflow: hidden;
+    cursor: pointer;
+    img {
+        z-index: -1;
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .text {
+        background-color: #eee;
+        transition: transform 400ms ease-in-out;
+        &:hover {
+            transform: translateY(calc(-100% + 30px));
+        }
+        h3 {
+            background-color: #222222;
+            color: #cccccc;
+            font-size: 2.4rem;
+            line-height: 3rem;
+            text-align: center;
+            height: 30px;
+        }
+        p {
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+            text-indent: 25px;
+            text-align: justify;
+            padding: 15px;
+            width: inherit;
+            &::first-letter {
+                font-size: 2.2rem;
+                font-weight: 1000;
+            }
+        }
+    }
+}
