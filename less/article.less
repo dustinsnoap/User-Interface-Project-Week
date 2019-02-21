@@ -4,159 +4,50 @@
  /_/ \_\_|_\ |_| |___\___|____|___|
 */
 article {
-    .flex(space-between);
-    img {
-        z-index: -2;
-    }
-    h2 {
-        z-index: -1;
-    }
-    &.small {
-        display: flex;
-        align-items: center;
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-column-gap: 50px;
+    color: #222222;
+    .title {
+        border-top: 1px solid black;
+        width: 200px;
         h2 {
-            font-weight: 1000;
+            font-size: 2.4rem;
+            line-height: 3.6rem;
+        }
+    }
+    .text {
+        h3 {
+            font-size: 3.6rem;
+            line-height: 4.2rem;
+            word-spacing: 0.33px;
+            margin-bottom: 25px;
         }
         p {
             font-size: 1.6rem;
-            line-height: 2.4rem;
+            line-height: 2.2rem;
+            text-indent: 25px;
+            text-align: justify;
+            &::first-letter {
+                font-size: 2.2rem;
+                font-weight: 1000;
+            }
         }
     }
-    &.large {
-        flex-direction: column;
+    @media (max-width: @SM) {
+        grid-template-columns: auto;
+        grid-row-gap: 50px;
+        .title {
+            margin: 0 auto;
+            h2 {
+                text-align: center;
+            }
+        }
         .text {
-            display: flex;
-            flex-direction: column;
-        }
-        h2 {
-            background-color: #d7d7d7;
-            border: 1px solid #ffffff;
-            display: block;
-            font-size: 2.4rem;
-            height: 95px;
-            letter-spacing: 7px;
-            line-height: 95px;
-            text-align: center;
-            text-transform: uppercase;
-        }
-        p {
-            font-size: 1.8rem;
-            line-height: 2.4rem;
-        }
-        img {
-            width: 100%;
-        }
-    }
-    @media (min-width: 800px) {
-        &.small {
-            // margin-bottom: 100px;
-            margin-bottom: 16px;
-            .text {
-                width: 420px;
-            }
-            h2 {
-                color: #222222;
+            h3 {
                 font-size: 2.4rem;
-                letter-spacing: 0.3px;
-            }
-            p {
-                margin: 15px 0 25px 0;
-                line-height: 2.6rem;
-                word-spacing: 0.3px;
-            }
-            //////REMOVE THIS
-            a {
-                padding: 15px 10px;
-                width: 136px;
-                min-width: fit-content;
-            }
-            &:nth-of-type(odd) {
-                .text {
-                    order: 1;
-                }
-                img {
-                    order: 2;
-                }
-            }
+                line-height: 3.6rem;
+            };
         }
-        &.large {
-            align-items: center;
-            margin: 45px 0 30px 0;
-            .text {
-                align-items: center;
-                margin-top: 90px;
-                width:100%;
-            }
-            h2 {
-                align-self: flex-end;
-                position: absolute;
-                transform: translateY(-150px);
-                width: 316px;
-            }
-            p {
-                width: 448px;
-                margin-bottom: 25px;
-            }
-            &:nth-of-type(even) {
-                h2 {
-                    align-self: flex-start;
-                }
-            }
-        }
-    }
-    @media (max-width: 800px) {
-        &.small {
-            flex-direction: column;
-            // padding: 0 15px;
-            // margin: 35px 0 10px 0;
-            margin-top: 11px;
-            padding: 0;
-            .text {
-                // margin-top: 2.8rem;
-                margin: 0;
-            }
-            h2 {
-                font-size: 2.4rem;
-                word-spacing: 1px;
-            }
-            p {
-                // margin: 21px 0;
-                margin: 23px 0;
-                line-height: 2.6rem;
-            }
-            a {//////REMOVE THIS
-                margin-top: 25px;
-                padding: 14.5px 0;
-                width: 100%;
-            }
-            img {
-                width: 100%;
-                height: 276px;
-            }
-            &.services {
-                .text {
-                    order: 1;
-                }
-                img {
-                    order: 2;
-                }
-            }
-        }//small
-        &.large {
-            margin-bottom: 36px;
-            .text {
-                padding: 0 15px;
-            }
-            h2 {
-                transform: translateY(-15px);
-                word-spacing: 6px;
-            }
-            p {
-                margin: 12px 0;
-            }
-            img {
-                height: 200px;
-            }
-        }//large
     }
 }

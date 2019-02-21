@@ -329,45 +329,16 @@ header.contact .jumbo {
     height: 209px;
   }
 }
+/*__  __   _   ___ _  _ 
+ |  \/  | /_\ |_ _| \| |
+ | |\/| |/ _ \ | || .` |
+ |_|  |_/_/ \_\___|_|\_|
+*/
 .main {
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 800px) {
-  .main {
-    padding: 48px 85px;
-  }
-  .main .p > p {
-    font-size: 1.6rem;
-    line-height: 2.6rem;
-  }
-  .main .subtitle {
-    font-size: 2.4rem;
-    font-weight: 1000;
-    word-spacing: 2px;
-  }
-}
-@media (max-width: 800px) {
-  .main {
-    padding: 32px 15px;
-  }
-  .main.services {
-    padding: 0 15px;
-  }
-  .main.services .p > p {
-    margin-top: 30px;
-  }
-  .main .subtitle {
-    font-size: 2.4rem;
-    padding: 0 15px;
-    margin-top: 42px;
-    margin-bottom: 25px;
-    word-spacing: 2px;
-  }
-  .main .p > p {
-    font-size: 1.6rem;
-    line-height: 2.6rem;
-  }
+  padding: 50px;
+  display: grid;
+  grid-auto-columns: auto;
+  grid-row-gap: 50px;
 }
 /* ___ ___  _  _ _____ _   ___ _____ 
   / __/ _ \| \| |_   _/_\ / __|_   _|
@@ -494,151 +465,49 @@ header.contact .jumbo {
  /_/ \_\_|_\ |_| |___\___|____|___|
 */
 article {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: start;
+  display: grid;
+  grid-template-columns: max-content auto;
+  grid-column-gap: 50px;
+  color: #222222;
 }
-article img {
-  z-index: -2;
+article .title {
+  border-top: 1px solid black;
+  width: 200px;
 }
-article h2 {
-  z-index: -1;
+article .title h2 {
+  font-size: 2.4rem;
+  line-height: 3.6rem;
 }
-article.small {
-  display: flex;
-  align-items: center;
+article .text h3 {
+  font-size: 3.6rem;
+  line-height: 4.2rem;
+  word-spacing: 0.33px;
+  margin-bottom: 25px;
 }
-article.small h2 {
+article .text p {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  text-indent: 25px;
+  text-align: justify;
+}
+article .text p::first-letter {
+  font-size: 2.2rem;
   font-weight: 1000;
 }
-article.small p {
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-}
-article.large {
-  flex-direction: column;
-}
-article.large .text {
-  display: flex;
-  flex-direction: column;
-}
-article.large h2 {
-  background-color: #d7d7d7;
-  border: 1px solid #ffffff;
-  display: block;
-  font-size: 2.4rem;
-  height: 95px;
-  letter-spacing: 7px;
-  line-height: 95px;
-  text-align: center;
-  text-transform: uppercase;
-}
-article.large p {
-  font-size: 1.8rem;
-  line-height: 2.4rem;
-}
-article.large img {
-  width: 100%;
-}
-@media (min-width: 800px) {
-  article.small {
-    margin-bottom: 16px;
-  }
-  article.small .text {
-    width: 420px;
-  }
-  article.small h2 {
-    color: #222222;
-    font-size: 2.4rem;
-    letter-spacing: 0.3px;
-  }
-  article.small p {
-    margin: 15px 0 25px 0;
-    line-height: 2.6rem;
-    word-spacing: 0.3px;
-  }
-  article.small a {
-    padding: 15px 10px;
-    width: 136px;
-    min-width: fit-content;
-  }
-  article.small:nth-of-type(odd) .text {
-    order: 1;
-  }
-  article.small:nth-of-type(odd) img {
-    order: 2;
-  }
-  article.large {
-    align-items: center;
-    margin: 45px 0 30px 0;
-  }
-  article.large .text {
-    align-items: center;
-    margin-top: 90px;
-    width: 100%;
-  }
-  article.large h2 {
-    align-self: flex-end;
-    position: absolute;
-    transform: translateY(-150px);
-    width: 316px;
-  }
-  article.large p {
-    width: 448px;
-    margin-bottom: 25px;
-  }
-  article.large:nth-of-type(even) h2 {
-    align-self: flex-start;
-  }
-}
 @media (max-width: 800px) {
-  article.small {
-    flex-direction: column;
-    margin-top: 11px;
-    padding: 0;
+  article {
+    grid-template-columns: auto;
+    grid-row-gap: 50px;
   }
-  article.small .text {
-    margin: 0;
+  article .title {
+    margin: 0 auto;
   }
-  article.small h2 {
+  article .title h2 {
+    text-align: center;
+  }
+  article .text h3 {
     font-size: 2.4rem;
-    word-spacing: 1px;
-  }
-  article.small p {
-    margin: 23px 0;
-    line-height: 2.6rem;
-  }
-  article.small a {
-    margin-top: 25px;
-    padding: 14.5px 0;
-    width: 100%;
-  }
-  article.small img {
-    width: 100%;
-    height: 276px;
-  }
-  article.small.services .text {
-    order: 1;
-  }
-  article.small.services img {
-    order: 2;
-  }
-  article.large {
-    margin-bottom: 36px;
-  }
-  article.large .text {
-    padding: 0 15px;
-  }
-  article.large h2 {
-    transform: translateY(-15px);
-    word-spacing: 6px;
-  }
-  article.large p {
-    margin: 12px 0;
-  }
-  article.large img {
-    height: 200px;
+    line-height: 3.6rem;
   }
 }
 .tabs {
