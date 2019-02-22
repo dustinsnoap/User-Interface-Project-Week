@@ -1,7 +1,8 @@
 class TabLinks {
-    constructor(tabElement) {
+    constructor(attrs) {
         //inital vars
-        this.element = tabElement
+        this.element = document.querySelector('.main .tabs')
+        this.articles = attrs
         this.page = this.element.classList[0]
         this.main = document.querySelector('.main')
         this.tabs = this.element.querySelectorAll('.tab')
@@ -21,7 +22,7 @@ class TabLinks {
     }
     updateArticle() {
         while(this.main.querySelectorAll('article')[0]) {this.main.querySelectorAll('article')[0].parentNode.removeChild(this.main.querySelectorAll('article')[0])}
-        let tests = articles[this.page]
+        let tests = this.articles
             .filter(article => article.id === this.selectedTab)
             .forEach(article => this.main.appendChild(this.createArticle(article)))
     }
@@ -31,7 +32,7 @@ class TabLinks {
         articleNode.classList.add('small')
 
         let imgNode = document.createElement('img')
-        imgNode.src = './img/' + article.imgSrc
+        imgNode.src = '../img/' + article.imgSrc
         articleNode.appendChild(imgNode)
 
         let textNode = document.createElement('div')
@@ -66,36 +67,3 @@ class TabArticle {
         img.src 
     }
 }
-
-let articles = {
-    home: [],
-    services: [
-        {
-            id: 'preconstruction',
-            title: 'Pre-Construction',
-            imgSrc: `services/services-tab-pre-construction-img.png`,
-            p1:  `Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.`,
-            p2: `Phosfluorescently engage worldwide methodologies with web-enabled technology. Interactively coordinate proactive e-commerce via process-centric 'outside the box' thinking. Completely pursue scalable customer service through sustainable potentialities.`,
-        },{
-            id: 'construction',
-            title: 'Construction',
-            imgSrc: `services/services-tab-construction-img.png`,
-            p1:  `Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.`,
-            p2: `Phosfluorescently engage worldwide methodologies with web-enabled technology. Interactively coordinate proactive e-commerce via process-centric 'outside the box' thinking. Completely pursue scalable customer service through sustainable potentialities.`,
-        },{
-            id: 'designbuild',
-            title: `Design Build`,
-            imgSrc: `services/services-tab-design-build-img.png`,
-            p1:  `Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.`,
-            p2: `Phosfluorescently engage worldwide methodologies with web-enabled technology. Interactively coordinate proactive e-commerce via process-centric 'outside the box' thinking. Completely pursue scalable customer service through sustainable potentialities.`,
-        },{
-            id: 'sustainability',
-            title: `Sustainability`,
-            imgSrc: `services/services-tab-sustainability-img.png`,
-            p1:  `Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.`,
-            p2: `Phosfluorescently engage worldwide methodologies with web-enabled technology. Interactively coordinate proactive e-commerce via process-centric 'outside the box' thinking. Completely pursue scalable customer service through sustainable potentialities.`,
-        },
-    ],
-}
-
-new TabLinks(document.querySelector('.tabs'))

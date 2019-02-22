@@ -5,13 +5,11 @@
 	<meta charset='utf-8'>
 	<meta name="viewport" content="width=device-width">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel='stylesheet' href='css/index.css'>
-	<script src="./js/navigation.js" defer></script>
-	<script src="./js/tabs.js" defer></script>
-	<script src="./js/index.js" defer></script>
-	<!--[if IE]>
-		<script src='http://html5shiv.googlecode.com/svn/trunk/html5.js'></script>
-	<![endif]-->
+	<link rel='stylesheet' href='../css/index.css'>
+	<script src="../js/navigation.js" defer></script>
+	<script src="../components/carousel/carousel.js" defer></script>
+	<script src="../js/tabs.js" defer></script>
+	<script src="../js/services.js" defer></script>
 </head>
 <body>
 	<div class='container services'>
@@ -26,24 +24,19 @@
 					</figure>
 				</div>
 				<nav>
-					<a href='/'>Home</a>
-					<a href='/services.html'>Services</a>
-					<a href='/contact.html'>Contact</a>
+					<a href='../index.html'>Home</a>
+					<a href='./services.html'>Services</a>
+					<a href='./contact.html'>Contact</a>
 				</nav>
-			</div>
-			<div class='jumbo'>
-				<h1 class='jump-txt'>Services</h1>
 			</div>
 		</header>
 		<div class='main services'>
-			<div class="item p">
-				<p>Services include: completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>
-			</div>
+			<p>Services include: completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>
 			<div class='services tabs'>
-				<a data-tab='preconstruction' class='tab large'>Pre-Construction</a>
-				<a data-tab='construction' class='tab large selected'>Construction</a>
-				<a data-tab='designbuild' class='tab large'>Design Build</a>
-				<a data-tab='sustainability' class='tab large'>Sustainability</a>
+				<a data-tab='preconstruction' class='tab'>Pre-Construction</a>
+				<a data-tab='construction' class='tab selected'>Construction</a>
+				<a data-tab='designbuild' class='tab'>Design Build</a>
+				<a data-tab='sustainability' class='tab'>Sustainability</a>
 			</div>
 		</div>
 		<footer>

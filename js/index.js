@@ -1,7 +1,7 @@
 window.onload = () => {
     let atts = {
         carousel: {
-            title: 'Home Page Saying',
+            title: 'Integrity,\nExcellence,\nProgress',
             imgs: [
                 './img/home/home-jumbotron.png',
                 './img/services/services-jumbotron.png',
