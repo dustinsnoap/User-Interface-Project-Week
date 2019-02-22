@@ -1,0 +1,161 @@
+/*  _   ___ _____ ___ ___ _    ___ 
+   /_\ | _ \_   _|_ _/ __| |  | __|
+  / _ \|   / | |  | | (__| |__| _| 
+ /_/ \_\_|_\ |_| |___\___|____|___|
+*/
+article {
+    display: grid;
+    grid-column-gap: 50px;
+    img {
+        width: 100%;
+    }
+    .text {
+        display: grid;
+        grid-row-gap: 20px;
+    }
+    h2 {
+        font-size: 2.4rem;
+        font-weight: 1000;
+    }
+    h3 {
+        font-size: 3.6rem;
+        line-height: 4.2rem;
+        word-spacing: 0.33px;
+        margin-bottom: 25px;
+    }
+    p {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        text-align: justify;
+    }
+    &.small {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        &:nth-of-type(odd) {
+            .text {
+                grid-row-start: 1;
+            }
+        }
+        .text {
+            a {
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+                text-align: justify;
+                color: #222222;
+                text-decoration: none;
+                padding: 10px;
+                text-align: center;
+                border: 1px solid black;
+                width: 150px;
+                &:hover {
+                    color: #ffffff;
+                    background-color: #222222;
+                }
+            }
+        }//text
+        @media (max-width: @SM) {
+            grid-template-columns: 1fr;
+            grid-row-gap: 20px;
+            padding: 0 15px;
+            .text {
+                grid-template-columns: 1fr;
+                a {
+                    width: 100%;
+                }
+            }
+            &:nth-of-type(odd) {
+                .text {
+                    grid-row-start: auto;
+                }
+            }
+        }
+    }
+    &.medium {
+        grid-template-columns: max-content auto;
+        color: #222222;
+        .title {
+            border-top: 1px solid black;
+            width: 200px;
+            h2 {
+                font-size: 2.4rem;
+                line-height: 6.8rem;
+                font-weight: 1000;
+            }
+        }
+        .text {
+            p {
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+                text-indent: 25px;
+                text-align: justify;
+                &::first-letter {
+                    font-size: 2.2rem;
+                    font-weight: 1000;
+                }
+            }
+        }
+        @media (max-width: @SM) {
+            grid-template-columns: auto;
+            grid-row-gap: 50px;
+            .title {
+                margin: 0 auto;
+                width: 250px;
+                h2 {
+                    text-align: center;
+                    font-size: 3.6rem;
+                    line-break: 4.2rem;
+                }
+            }
+            .text {
+                h3 {
+                    font-size: 2.4rem;
+                    line-height: 3.6rem;
+                };
+            }
+        }//media
+    }//medium\
+    &.large {
+        &:nth-of-type(even) {
+            .text {
+                h2 {
+                    justify-self: left;
+                    transform: translate(-50px, -50px);
+                }
+            }
+        }
+        &:nth-of-type(odd) {
+            .text {
+                h2 {
+                    justify-self: right;
+                    transform: translate(50px, -50px);
+                }
+            }
+        }
+        .text {
+            padding: 0 50px;
+            h2 {
+                background-color: #d7d7d7;
+                letter-spacing: 5px;
+                word-spacing: 1px;
+                text-transform: uppercase;
+                width: 300px;
+                padding: 35px 0;
+                text-align: center;
+                border: 1px solid white;
+            }
+        }
+        @media (max-width: @SM) {
+            img {
+                height: 200px;
+            }
+            .text {
+                h2 {
+                    &:nth-of-type(n) {
+                        justify-self: center;
+                        transform: translate(0, -20px);
+                    }
+                }
+            }
+        }
+    }
+}

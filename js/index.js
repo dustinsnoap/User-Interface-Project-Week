@@ -1,4 +1,13 @@
-// window.onload = () => {
-//     new TabLinks(document.querySelector('.tabs'))
-//     // document.querySelectorAll('.tab').forEach(tab => new TabLink(tab))
-// }
+window.onload = () => {
+    let atts = {
+        carousel: {
+            title: 'Home Page Saying',
+            imgs: [
+                './img/home/home-jumbotron.png',
+                './img/services/services-jumbotron.png',
+                './img/contact/contact-jumbotron.png',
+                ]
+        },
+    }
+    new Carousel(atts.carousel)
+}
