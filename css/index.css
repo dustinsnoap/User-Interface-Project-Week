@@ -192,118 +192,66 @@ body {
  | (_| (_) | .` | | |/ _ \ (__  | |  
   \___\___/|_|\_| |_/_/ \_\___| |_|  
 */
-.main.contact {
-  display: flex;
+.contact {
+  color: #222222;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 50px 200px;
+  width: 100%;
 }
-.main.contact h2 {
+.contact h2 {
   font-size: 2.4rem;
   font-weight: 1000;
-  letter-spacing: 0.33px;
 }
-.main.contact .item {
-  display: flex;
-  flex-direction: column;
-  margin: 28px 0;
-}
-.main.contact .item h3 {
-  font-size: 2rem;
-  font-weight: 1000;
-  word-spacing: 0.2px;
-}
-.main.contact .item p {
-  font-size: 1.8rem;
-  line-height: 2.9rem;
-}
-.main.contact .item label {
+.contact h3 {
   font-size: 1.6rem;
-  line-height: 2.4rem;
+  font-weight: 1000;
 }
-.main.contact .item small {
-  color: #888;
-  font-size: 1.3rem;
-  line-height: 1.7rem;
-  word-spacing: 0.33px;
+.contact .item {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 5px;
 }
-.main.contact .item input {
-  height: 40px;
-  padding: 0 9px;
-  margin: 6px 0;
-  font-size: 1.5rem;
-  border-radius: 5px;
-  word-spacing: 2px;
-  letter-spacing: 0.3px;
-  border-width: 1px;
+.contact .item label,
+.contact .item p {
+  font-size: 1.4rem;
 }
-.main.contact .item input[type=radio] {
-  margin: 0 6px 0 0;
-  padding: 0;
-  height: fit-content;
-  width: fit-content;
+.contact .item small {
+  font-size: 1.2rem;
 }
-.main.contact .item input[type=submit] {
+.contact .item input:not([type='submit']) {
+  font-size: 1.2rem;
+  padding: 5px 10px;
+}
+.contact .item input[type='submit'] {
   background-color: transparent;
-  border: 1px solid black;
-  border-radius: 0;
+  border: 1px solid #222222;
+  width: fit-content;
+  padding: 10px 30px;
 }
-.main.contact .item textarea {
-  height: 135px;
-  border-radius: 5px;
-  padding: 7px;
+.contact .item input[type='submit']:hover {
+  background-color: #222222;
+  color: #fff;
 }
-@media (min-width: 800px) {
-  .main.contact {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .main.contact form {
-    display: flex;
-    flex-direction: column;
-    height: 650px;
-    min-height: fit-content;
-  }
-  .main.contact form .item input {
-    width: 411px;
-  }
-  .main.contact form .item input[type='textarea'] {
-    height: 200px;
-  }
-  .main.contact form .item input[type='submit'] {
-    width: 136px;
-    height: 46px;
-  }
-  .main.contact form .item textarea {
-    width: 411px;
-    max-width: 666px;
-  }
-  .main.contact form .item div {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 5px 0;
-  }
-  .main.contact .locations {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 650px;
-    min-width: fit-content;
-  }
+.contact .item textarea {
+  height: 150px;
+  padding: 10px;
+}
+.contact form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 25px;
+}
+.contact .locations {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+  height: fit-content;
 }
 @media (max-width: 800px) {
-  .main.contact {
-    flex-direction: column;
-  }
-  .main.contact form input[type=submit] {
-    background-color: transparent;
-    border: 1px solid black;
-    border-radius: 0;
-  }
-  .main.contact .locations {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 500px;
-    min-width: fit-content;
+  .contact {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
   }
 }
 .tabs {

@@ -3,119 +3,62 @@
  | (_| (_) | .` | | |/ _ \ (__  | |  
   \___\___/|_|\_| |_/_/ \_\___| |_|  
 */
-.main.contact {
-    display: flex;
+.contact {
+    color: #222222;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 50px 200px;
+    width: 100%;
     h2 {
         font-size: 2.4rem;
         font-weight: 1000;
-        letter-spacing: 0.33px;
+    }
+    h3 {
+        font-size: 1.6rem;
+        font-weight: 1000;
     }
     .item {
-        display: flex;
-        flex-direction: column;
-        margin: 28px 0;
-        h3 {
-            font-size: 2rem;
-            font-weight: 1000;
-            word-spacing: 0.2px;
-        }
-        p {
-            font-size: 1.8rem;
-            line-height: 2.9rem;
-        }
-        label {
-            font-size: 1.6rem;
-            line-height: 2.4rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+        label, p {
+            font-size: 1.4rem;
         }
         small {
-            color: #888;
-            font-size: 1.3rem;
-            line-height: 1.7rem;
-            word-spacing: 0.33px;
-            
+            font-size: 1.2rem;
         }
-        input {
-            height: 40px;
-            padding: 0 9px;
-            margin: 6px 0;
-            font-size: 1.5rem;
-            border-radius: 5px;
-            word-spacing: 2px;
-            letter-spacing: 0.3px;
-            border-width: 1px;
+        input:not([type='submit']) {
+            font-size: 1.2rem;
+            padding: 5px 10px;
         }
-        input[type=radio] {
-            margin: 0 6px 0 0;
-            padding: 0;
-            height: fit-content;
-            width: fit-content;
-        }
-        input[type=submit] {
+        input[type='submit'] {
             background-color: transparent;
-            border: 1px solid black;
-            border-radius: 0;
+            border: 1px solid #222222;
+            width: fit-content;
+            padding: 10px 30px;
+            &:hover {
+                background-color: #222222;
+                color: #fff;
+            }
         }
         textarea {
-            height: 135px;
-            border-radius: 5px;
-            padding: 7px;
+            height: 150px;
+            padding: 10px;
         }
+    }//item
+    form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 25px;
+    }//form
+    .locations {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+        height: fit-content;
     }
-    @media (min-width: 800px) {
-        flex-direction: row;
-        justify-content: space-between;
-        form {
-            display: flex;
-            flex-direction: column;
-            height: 650px;
-            min-height: fit-content;
-            .item {
-                input {
-                    width: 411px;
-                }
-                input[type='textarea'] {
-                    height: 200px;
-                }
-                input[type='submit'] {
-                    width: 136px;
-                    height: 46px;
-                }
-                textarea {
-                    width: 411px;
-                    max-width: 666px;
-                }
-                div {
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: center;
-                    margin: 5px 0;
-                }
-            }//item
-        }//form
-        .locations {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 650px;
-            min-width: fit-content;
-        }
-        
-    }
-    @media (max-width: 800px) {
-        flex-direction: column;
-        form {
-            input[type=submit] {
-                background-color: transparent;
-                border: 1px solid black;
-                border-radius: 0;
-            }
-        }//form
-        .locations {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 500px;
-            min-width: fit-content;
-        }
+    @media (max-width: @SM) {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
     }
 }
