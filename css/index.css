@@ -310,7 +310,7 @@ header .nav-container {
   line-height: normal;
   text-align: inherit;
   text-transform: none;
-  background-color: #98A2AE;
+  background-color: rgba(152, 162, 174, 0.85);
   height: 50px;
   overflow: hidden;
   position: fixed;
@@ -328,6 +328,8 @@ header .nav-container .banner {
 }
 header .nav-container .banner .logo {
   font-weight: bold;
+  text-decoration: none;
+  color: #fff;
 }
 header .nav-container .banner .nav-btn {
   cursor: pointer;
@@ -744,6 +746,10 @@ article.large .text h2 {
   grid-template-columns: repeat(auto-fill, minmax(400px, auto));
   grid-column-gap: 50px;
   width: 100%;
+}
+.main.projects p {
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
 .project {
   display: grid;
