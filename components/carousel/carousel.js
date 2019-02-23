@@ -24,7 +24,7 @@ class Carousel {
         this.element.querySelectorAll('.tab')
             .forEach(tab => {
                 tab.classList.remove('selected')
-                if(tab.dataset.slide === this.index) tab.classList.add('selected')
+                if(tab.dataset.slide == this.index) tab.classList.add('selected')
             })
     }
     tab(tab) {
